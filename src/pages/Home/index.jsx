@@ -1,10 +1,12 @@
-import "../../App.css";
-import Header from "../../components/Header";
+import '../../App.css'
+import Header from '../../components/Header'
+import Hero from '../../components/Hero'
 
 function Home() {
     return (
         <div className="App">
             <Header />
+            <Hero />
             {/* <header className="App-header"> 
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
@@ -19,7 +21,7 @@ function Home() {
                 </a>
             </header> */}
         </div>
-    );
+    )
 }
 
-export default Home;
+export default Home

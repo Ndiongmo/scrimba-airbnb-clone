@@ -1,5 +1,5 @@
 function Navbar() {
-    return <nav></nav>;
+    return <nav></nav>
 }
 
-export default Navbar;
+export default Navbar
