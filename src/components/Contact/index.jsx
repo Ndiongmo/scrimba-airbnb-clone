@@ -1,21 +1,18 @@
-import picture from '../../assets/mr-whiskerson.png'
 import tel from '../../assets/phone-icon.png'
 import mail from '../../assets/mail-icon.png'
 
-function Contact() {
+function Contact(props) {
     return (
-        <div className="contacts">
-            <div className="contact-card">
-                <img src={picture} alt="Profil" />
-                <h3>Mr. Whiskerson</h3>
-                <div className="info-group">
-                    <img src={tel} alt="Phone" />
-                    <p>(212) 555-1234</p>
-                </div>
-                <div className="info-group">
-                    <img src={mail} alt="Mail" />
-                    <p>mr.whiskaz@catnap.meow</p>
-                </div>
+        <div className="contact-card">
+            <img src={props.img} alt="Profil" />
+            <h3>{props.name}</h3>
+            <div className="info-group">
+                <img src={tel} alt="Phone" />
+                <p>{props.phone}</p>
+            </div>
+            <div className="info-group">
+                <img src={mail} alt="Mail" />
+                <p>{props.email}</p>
             </div>
         </div>
     )
