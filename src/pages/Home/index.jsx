@@ -2,6 +2,7 @@ import '../../App.css'
 import Header from '../../components/Header'
 import Hero from '../../components/Hero'
 import Card from '../../components/Card'
+import Contact from '../../components/Contact'
 
 function Home() {
     return (
@@ -9,6 +10,10 @@ function Home() {
             <Header />
             <Hero />
             <Card />
+            <Contact img="" name="" phone="" email="" />
+            <Contact img="" name="" phone="" email="" />
+            <Contact img="" name="" phone="" email="" />
+            <Contact img="" name="" phone="" email="" />
             {/* <header className="App-header"> 
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
