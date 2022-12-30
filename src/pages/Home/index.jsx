@@ -5,71 +5,56 @@ import Card from '../../components/Card'
 import Contact from '../../components/Contact'
 import Joke from '../../components/Joke'
 
-import Whiskerson from '../../assets/mr-whiskerson.png'
-import Fluffykins from '../../assets/fluffykins.png'
-import Felix from '../../assets/felix.png'
-import Pumpkin from '../../assets/pumpkin.png'
-import profil from '../../assets/katie-zaferes.png'
+import { jokes } from '../../datas/jokesData'
+import { contactList } from '../../datas/contactData'
+import { cardList } from '../../datas/cardData'
 
 function Home() {
+    const jokeElem = jokes.map((jokeItem, index) => {
+        return (
+            <Joke
+                key={`${index}`}
+                setup={jokeItem.setup}
+                punchline={jokeItem.punchline}
+            />
+        )
+    })
+
+    const contactElements = contactList.map((contactItem, index) => {
+        return (
+            <Contact
+                key={`${contactItem.name}-${index}`}
+                img={contactItem.img}
+                name={contactItem.name}
+                phone={contactItem.phone}
+                email={contactItem.email}
+            />
+        )
+    })
+
+    const cardElemts = cardList.map((cardItem, index) => {
+        return (
+            <Card
+                key={`${index}`}
+                img={cardItem.img}
+                rating={cardItem.rating}
+                reviewCount={cardItem.reviewCount}
+                country={cardItem.country}
+                title={cardItem.title}
+                price={cardItem.price}
+            />
+        )
+    })
+
     return (
         <div className="App">
             <Header />
             <Hero />
-            <div className="Card">
-                <Card
-                    img={profil}
-                    rating="5.0"
-                    reviewCount={6}
-                    country="USA"
-                    title="Life lessons with Katie Zaferes"
-                    price={136}
-                />
-                <Card
-                    img={profil}
-                    rating="4.8"
-                    reviewCount={3}
-                    country="UK"
-                    title="Dev lessons with Bob Ziroll"
-                    price={25}
-                />
-                <Card
-                    img={profil}
-                    rating="7.6"
-                    reviewCount={13}
-                    country="CMR"
-                    title="African Language init by Maurice L. N."
-                    price={125}
-                />
-            </div>
+            <div className="Card">{cardElemts}</div>
 
-            <div className="contacts">
-                <Contact
-                    img={Whiskerson}
-                    name="Mr Whiskerson"
-                    phone="(212) 555-1234"
-                    email="mr.whiskaz@catnap.meow"
-                />
-                <Contact
-                    img={Fluffykins}
-                    name="Fluffykins"
-                    phone="(212) 555-2345"
-                    email="fluff@me.com"
-                />
-                <Contact
-                    img={Felix}
-                    name="Felix"
-                    phone="(212) 555-4567"
-                    email="thecat@hotmail.com"
-                />
-                <Contact
-                    img={Pumpkin}
-                    name="Pumpkin"
-                    phone="(0800) CAT KING"
-                    email="pumpkin@scrimba.com"
-                />
-            </div>
-            <Joke punchline="It's hard to explain puns to kleptomaniacs because they always take things literally" />
+            <div className="contacts">{contactElements}</div>
+            {jokeElem}
+            {/* <Joke punchline="It's hard to explain puns to kleptomaniacs because they always take things literally" />
             <Joke
                 setup="I got my daughter a fridge for her birthday."
                 punchline="I can't wait to see her face light up when she opens it"
@@ -89,7 +74,7 @@ function Home() {
             <Joke
                 setup="What's the best thing about Switzerland ?"
                 punchline="I don't know, but the flag is a big plus!"
-            />
+            /> */}
         </div>
     )
 }
