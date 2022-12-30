@@ -1,45 +1,20 @@
-import profil from '../../assets/katie-zaferes.png'
 import star from '../../assets/star.png'
 
-function Card() {
+function Card({ img, rating, reviewCount, country, title, price }) {
     return (
-        <div className="Card">
-            <div className="Card-items">
-                <img src={profil} className="Card-image" alt="Katie" />
-                <div className="card--stats">
-                    <img src={star} alt="star" />
-                    <span>5.0</span>
-                    <span style={{ color: 'gray' }}>(6) - USA</span>
-                </div>
-                <p>Life lessons with Katie Zaferes</p>
-                <p>
-                    <b>From $136</b> / person
-                </p>
+        <div className="Card-items">
+            <img src={img} className="Card-image" alt="Katie" />
+            <div className="card--stats">
+                <img src={star} alt="star" />
+                <span>{rating}</span>
+                <span style={{ color: 'gray' }}>
+                    ({reviewCount}) - {country}
+                </span>
             </div>
-            <div className="Card-items">
-                <img src={profil} className="Card-image" alt="Katie" />
-                <div className="card--stats">
-                    <img src={star} alt="star" />
-                    <span>5.0</span>
-                    <span style={{ color: 'gray' }}>(30) - USA</span>
-                </div>
-                <p>Life lessons with Katie Zaferes</p>
-                <p>
-                    <b>From $136</b> / person
-                </p>
-            </div>
-            <div className="Card-items">
-                <img src={profil} className="Card-image" alt="Katie" />
-                <div className="card--stats">
-                    <img src={star} alt="star" />
-                    <span> 4.8</span>
-                    <span style={{ color: 'gray' }}>(2) - USA</span>
-                </div>
-                <p>Life lessons with Katie Zaferes</p>
-                <p>
-                    <b>From $136</b> / person
-                </p>
-            </div>
+            <p>{title}</p>
+            <p>
+                <b>From ${price}</b> / person
+            </p>
         </div>
     )
 }

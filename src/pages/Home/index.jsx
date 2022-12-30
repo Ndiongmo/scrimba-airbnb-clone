@@ -9,13 +9,40 @@ import Whiskerson from '../../assets/mr-whiskerson.png'
 import Fluffykins from '../../assets/fluffykins.png'
 import Felix from '../../assets/felix.png'
 import Pumpkin from '../../assets/pumpkin.png'
+import profil from '../../assets/katie-zaferes.png'
 
 function Home() {
     return (
         <div className="App">
             <Header />
             <Hero />
-            <Card />
+            <div className="Card">
+                <Card
+                    img={profil}
+                    rating="5.0"
+                    reviewCount={6}
+                    country="USA"
+                    title="Life lessons with Katie Zaferes"
+                    price={136}
+                />
+                <Card
+                    img={profil}
+                    rating="4.8"
+                    reviewCount={3}
+                    country="UK"
+                    title="Dev lessons with Bob Ziroll"
+                    price={25}
+                />
+                <Card
+                    img={profil}
+                    rating="7.6"
+                    reviewCount={13}
+                    country="CMR"
+                    title="African Language init by Maurice L. N."
+                    price={125}
+                />
+            </div>
+
             <div className="contacts">
                 <Contact
                     img={Whiskerson}
