@@ -64,7 +64,7 @@
 }
 
 .Card-items {
-    /* flex-direction: column; */
+    flex-direction: column;
 }
 
 .Card-items .Card-image {
@@ -76,7 +76,7 @@
 .card--stats {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 5px;
 }
 
@@ -97,7 +97,6 @@
     }
 }
 
-/*Contact style*/
 .contacts {
     display: flex;
     justify-content: center;
