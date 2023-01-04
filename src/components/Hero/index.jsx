@@ -1,4 +1,4 @@
-import hero from '../../assets/hero.png'
+import hero from '../../assets/images/hero.png'
 function Hero() {
     return (
         <div className="App-hero">

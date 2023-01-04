@@ -1,4 +1,4 @@
-import profil from '../assets/katie-zaferes.png'
+import profil from '../assets/images/katie-zaferes.png'
 
 export const cardList = [
     {

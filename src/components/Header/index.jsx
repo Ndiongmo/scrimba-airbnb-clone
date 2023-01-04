@@ -1,4 +1,4 @@
-import logo from '../../assets/airbnb1.png'
+import logo from '../../assets/images/airbnb1.png'
 import Navbar from './Navbar'
 
 function Header() {

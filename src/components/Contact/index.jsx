@@ -1,5 +1,5 @@
-import tel from '../../assets/phone-icon.png'
-import mail from '../../assets/mail-icon.png'
+import tel from '../../assets/images/phone-icon.png'
+import mail from '../../assets/images/mail-icon.png'
 
 function Contact(props) {
     return (

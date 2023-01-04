@@ -1,4 +1,4 @@
-import star from '../../assets/star.png'
+import star from '../../assets/images/star.png'
 
 function Card({ img, rating, reviewCount, country, title, price }) {
     return (

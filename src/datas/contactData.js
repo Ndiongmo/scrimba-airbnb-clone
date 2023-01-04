@@ -1,7 +1,7 @@
-import Whiskerson from '../assets/mr-whiskerson.png'
-import Fluffykins from '../assets/fluffykins.png'
-import Felix from '../assets/felix.png'
-import Pumpkin from '../assets/pumpkin.png'
+import Whiskerson from '../assets/images/mr-whiskerson.png'
+import Fluffykins from '../assets/images/fluffykins.png'
+import Felix from '../assets/images/felix.png'
+import Pumpkin from '../assets/images/pumpkin.png'
 
 export const contactList = [
     {
