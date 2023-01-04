@@ -35,9 +35,9 @@ function Home() {
     const cardElemts = cardList.map((cardItem, index) => {
         return (
             <Card
-                key={`${index}`}
+                key={`${index}-${cardItem.id}`}
                 img={cardItem.coverImg}
-                rating={cardItem.rating}
+                rating={cardItem.stats.rating}
                 reviewCount={cardItem.stats.reviewCount}
                 country={cardItem.location}
                 title={cardItem.title}
