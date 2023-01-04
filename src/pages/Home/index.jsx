@@ -36,10 +36,10 @@ function Home() {
         return (
             <Card
                 key={`${index}`}
-                img={cardItem.img}
+                img={cardItem.coverImg}
                 rating={cardItem.rating}
-                reviewCount={cardItem.reviewCount}
-                country={cardItem.country}
+                reviewCount={cardItem.stats.reviewCount}
+                country={cardItem.location}
                 title={cardItem.title}
                 price={cardItem.price}
             />
