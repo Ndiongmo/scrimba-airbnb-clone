@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Journal from './components/Journal'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
+import Formulaire from './components/Form'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 document.title = 'AirBnB-Clone'
@@ -14,6 +15,7 @@ root.render(
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Travel-Journal" element={<Journal />} />
+                <Route path="/form" element={<Formulaire />} />
             </Routes>
         </Router>
     </React.StrictMode>

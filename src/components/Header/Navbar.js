@@ -25,6 +25,7 @@ function Navbar() {
             <StyledLink to="/travel-journal" $isFullLink>
                 Travel Journal
             </StyledLink>
+            <StyledLink to="/form">Formulaire</StyledLink>
         </HeaderNav>
     )
 }

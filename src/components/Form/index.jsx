@@ -1,14 +1,23 @@
-export default function Form() {
+import Header from '../Header'
+import React from 'react'
+
+function Formulaire() {
+    const [firstName, setFirstName] = React.useState('')
+    console.log(firstName)
     function handleChange(event) {
-        console.log(event)
+        setFirstName(event.target.value)
     }
     return (
-        <form>
-            <input
-                type="text"
-                placeholder="First Name"
-                onChange={handleChange}
-            />
-        </form>
+        <div className="App">
+            <Header />
+            <form style={{ marginTop: '30px' }}>
+                <input
+                    type="text"
+                    placeholder="First Name"
+                    onChange={handleChange}
+                />
+            </form>
+        </div>
     )
 }
+export default Formulaire
