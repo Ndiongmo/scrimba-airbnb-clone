@@ -3,9 +3,13 @@ import React from 'react'
 
 function Formulaire() {
     const [firstName, setFirstName] = React.useState('')
-    console.log(firstName)
-    function handleChange(event) {
+    const [lastName, setLastName] = React.useState('')
+    // console.log(firstName, lastName)
+    function handleFirstName(event) {
         setFirstName(event.target.value)
+    }
+    function handleLastName(event) {
+        setLastName(event.target.value)
     }
     return (
         <div className="App">
@@ -14,7 +18,13 @@ function Formulaire() {
                 <input
                     type="text"
                     placeholder="First Name"
-                    onChange={handleChange}
+                    onChange={handleFirstName}
+                    style={{ marginRight: '15px' }}
+                />
+                <input
+                    type="text"
+                    placeholder="Last Name"
+                    onChange={handleLastName}
                 />
             </form>
         </div>
