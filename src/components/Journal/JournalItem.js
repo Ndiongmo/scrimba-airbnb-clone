@@ -26,12 +26,17 @@ const JmDetailLocation = styled.div`
     gap: 15px;
 `
 
-const StyledLink = styled(Link)`
+// const StyledLink = styled(Link)`
+//     color: 'gray';
+//     textdecorationline: 'underline';
+// `
+const StyledAhref = styled.a`
     color: 'gray';
     textdecorationline: 'underline';
 `
 
 function JournalItem(props) {
+    let url = props.googleMapsUrl
     return (
         <JmItem>
             <JmImg>
@@ -70,9 +75,19 @@ function JournalItem(props) {
                             textDecorationLine: 'underline',
                         }}
                     >
-                        <StyledLink to={{ pathname: `${props.googleMapsUrl}` }}>
+                        {/* <StyledLink
+                            to={{ pathname: `${props.googleMapsUrl}` }}
+                            target="_blank"
+                        >
                             View on Google Maps
-                        </StyledLink>
+                        </StyledLink> */}
+                        <StyledAhref
+                            href={props.googleMapsUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            View on Google Maps
+                        </StyledAhref>
                     </span>
                 </JmDetailLocation>
                 <h1 style={{ fontSize: '25px' }}>{props.title}</h1>

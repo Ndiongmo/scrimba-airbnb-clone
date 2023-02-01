@@ -35,7 +35,7 @@ function Journal() {
     return (
         <div className="App">
             <Header />
-            <JournalMain>{console.log(journalElem)}</JournalMain>
+            <JournalMain>{journalElem}</JournalMain>
         </div>
     )
 }
